@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Reddit</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+         <ion-label fixed>Categorias</ion-label>
+             <ion-select [(ngModel)]="category" (ionChange)="changeCategory(category)" item-right>
+
+                               <ion-option value="sports" selected="true">Deportes</ion-option>
+                               <ion-option value="art">Arte</ion-option>
+                               <ion-option value="news">Noticias</ion-option>
+                               <ion-option value="space">Espacio</ion-option>
+                               <ion-option value="Music">Musica</ion-option>
+                               <ion-option value="videos">Videos</ion-option>
+                               <ion-option value="books">Libros</ion-option>
+                               <ion-option value="movies">Peliculas</ion-option>
+                               <ion-option value="television">Television</ion-option>
+                               <ion-option value="gaming">Juegos</ion-option>
+                               <ion-option value="science">Ciencia</ion-option>
+             </ion-select>
+          </ion-item>
+          <ion-item *ngFor="let item of items">            
+            <ion-thumbnail item-left *ngIf="item.data.thumbnail.length > 20">
+              <img src="{{item.data.thumbnail}}">
+            </ion-thumbnail>
+            <ion-thumbnail item-left *ngIf="item.data.thumbnail.length < 20">
+              <img src="/assets/img/not_picture.jpg">
+            </ion-thumbnail>
+            <h2>{{item.data.title}}</h2>
+            <ion-icon name="eye"></ion-icon><span style="font-size:12px;margin-left:12px">{{item.data.score}}</span>
+            <button ion-button clear item-right (click)="openVideo(item)">Ver</button>
+          </ion-item>
+    </ion-list>
+
+</ion-content>

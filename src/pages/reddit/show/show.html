@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+      <ion-card>
+          <img *ngIf="picture" src="{{picture}}"/>
+          <img *ngIf="!picture" src="/assets/img/not_picture.jpg"/>
+          <ion-card-content>
+          <ion-card-title>
+                    <ion-fab bottom right >
+                      <button ion-fab>Social</button>
+                      <ion-fab-list side="top">
+                        <button ion-fab>Facebook</button>
+                        <button ion-fab>Twitter</button>
+                        <button ion-fab>Youtube</button>
+                      </ion-fab-list>
+
+                </ion-fab>
+            </ion-card-title>
+          <ion-item>
+             <ion-icon name="contact"></ion-icon> {{ author}}
+            </ion-item>
+          <p> {{title}} </p>
+          </ion-card-content>
+      </ion-card>
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+  <ion-item >
+    <ion-label>Limite Videos</ion-label>
+    <ion-select  (ionChange)="changeSettings(gaming)" [(ngModel)]="gaming" item-right>
+      <ion-option value="10">10</ion-option>
+      <ion-option value="20">20</ion-option>
+      <ion-option value="30">30</ion-option>
+      <ion-option value="40">40</ion-option>
+      <ion-option value="50">50</ion-option>
+      <ion-option value="0">Sin Limite</ion-option>
+    </ion-select>
+    <ion-toggle [(ngModel)]="limit" checked="true" item-left></ion-toggle>
+
+  </ion-item>
+</ion-list>
+
+
+</ion-content>
