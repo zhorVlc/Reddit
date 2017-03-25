@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CityPage } from '../bike/city/city';
 
 
 @Component({
   selector: 'page-bike',
   templateUrl: 'bike.html'
 })
-export class BikePage {
+export class BikePage  {
 
   items:Array<{abbr:string,city:string,icon:string,land:string}>;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
 
-  ngOnInit(){
+  ionViewWillEnter(){
 
     this.items = [
           {abbr:'AU',city:'Brisbane',icon:'AU',land:'Australia'},
@@ -40,5 +41,9 @@ export class BikePage {
           {abbr:'RU',city:'Kazan',icon:'RU',land:'Rusia'},
 
     ]
+  }
+
+  openCity(p){
+       this.navCtrl.push(CityPage,{city:city});
   }
 }
