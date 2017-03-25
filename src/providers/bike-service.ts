@@ -21,7 +21,7 @@ export class BikeService {
   getCityDetails(city){
 
      this.city = city;
-     return this.http.get('https://api.jcdecaux.com/vls/v1/stations?contract={{this.city}}&apiKey={{this.api}}')
+     return this.http.get('https://api.jcdecaux.com/vls/v1/stations?contract='+this.city+'&apiKey='+this.api+'')
               .map(res=>res.json());
 
   }

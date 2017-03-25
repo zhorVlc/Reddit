@@ -44,6 +44,6 @@ export class BikePage  {
   }
 
   openCity(p){
-       this.navCtrl.push(CityPage,{city:city});
+       this.navCtrl.push(CityPage,{city:p});
   }
 }

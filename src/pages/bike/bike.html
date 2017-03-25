@@ -10,7 +10,7 @@
 <ion-content padding>
 
   <ion-list>
-  <ion-item *ngFor="let p of items">
+  <ion-item *ngFor="let p of items" (click)="openCity(p)">
     <ion-thumbnail item-left>
       <img src="assets/img/flag/{{p.icon}}.png">
     </ion-thumbnail>
