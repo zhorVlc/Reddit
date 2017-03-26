@@ -24519,3 +24519,19 @@ page-about .card-background-page .card-subtitle {
   width: 100%;
   color: #fff;
 }
+
+ion-app._gmaps_cdv_ .nav-decor {
+  background-color: transparent !important;
+}
+
+page-city sebm-google-map {
+  height: 100%;
+}
+
+page-city sebm-google-map img {
+  display: hidden;
+}
+
+page-city #map {
+  height: 100%;
+}

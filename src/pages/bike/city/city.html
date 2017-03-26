@@ -1,14 +1,29 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{city}} Rent-Bike</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content  [ngClass]="{'no-scroll': mapRendered}">
+   <sebm-google-map  [disableDefaultUI]="false"
+                    [zoomControl]="false"
+                    [streetViewControl]="false"
+                    [latitude]="lat"
+                    [longitude]="lng" [zoom]="14" >
 
-  
+      <sebm-google-map-marker *ngFor="let p of items;let i= index" [latitude]="p.position.lat" [longitude]="p.position.lng"
+                    [label] ="'P'" (markerClick)="pushMarket(p)">
+                   <sebm-google-map-info-window [disableAutoPan]="true">
+                         {{p.address}} <strong *ngIf="p.status =='OPEN'">ABIERTO</strong>
+                         <strong *ngIf="p.status !='OPEN'">CERRADA</strong>
+                  </sebm-google-map-info-window>
+    </sebm-google-map-marker>-->
+
+  </sebm-google-map>
+
+<div #map id="map" style="height:100%;"></div>
 
 </ion-content>
