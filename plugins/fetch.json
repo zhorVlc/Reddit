@@ -73,5 +73,32 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-datepicker": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-datepicker"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-mapbox": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Telerik-Verified-Plugins/Mapbox",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "ACCESS_TOKEN": "pk.eyJ1IjoiamFub3ZsYyIsImEiOiJjajB1MHozcTEwNWN5MnducHlpNHp1ZmxxIn0.ep6bKsnoqBrPmijCWGdmew"
+        }
     }
 }

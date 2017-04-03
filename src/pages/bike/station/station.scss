@@ -1,3 +1,42 @@
 page-station {
 
+
+    ion-content.content{
+        background: #969aa4;
+    }
+    ion-col {
+    border: 1px solid #000;
+  }
+    ion-card.card{
+       background: #969aa4;
+        background-image: url('/assets/img/flag/images.png');
+
+      }
+
+    ion-col.all.col {
+      background: #3398ce;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    ion-col.free.col {
+      background: #81c7a1;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    ion-col.used.col {
+      background: #d14643;
+      color: #FFFFFF;
+      text-align: center;
+
+    }
+
+
+  ion-icon .icon[name="bicycle"] {
+    box-shadow: 1px 1px 1px 1px black;
+    color: white;
+    float: inherit;
+    font-size: 3em;
+    width: 100%;
+  }
+
 }

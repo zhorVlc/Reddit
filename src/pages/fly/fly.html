@@ -1,0 +1,81 @@
+
+<ion-header>
+
+  <ion-navbar color=primary>
+    <ion-title>Busca vuelo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div id="map"style="position:relative !important"></div>
+   <ion-label color="primary" stacked>SALIDA</ion-label>
+   <ion-searchbar (ionClear)="CancelSearch()"
+                  (ionCancel) ="CancelSearch()"
+                  [formControl] ="searchControlSalida"
+                  [(ngModel)]="searchingSalida"
+                  (ionInput)="onSearchInputSalida()" required>
+   </ion-searchbar>
+   <div *ngIf="resultSalida" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+   <ion-list *ngIf="resultSalida">
+        <ion-item *ngFor="let item of result">
+          <p (click)="clickOrigen(item)">  {{item.label}} </p>
+        </ion-item>
+    </ion-list>
+
+    <ion-label color="primary" stacked>DESTINO</ion-label>
+    <ion-searchbar (ionClear)="CancelSearch()"
+                   (ionCancel) ="CancelSearch()"
+                   [formControl] ="searchControlDestino"
+                   [(ngModel)]="searchingDestino"
+                   (ionInput)="onSearchInputDestino()" required>
+    </ion-searchbar>
+    <div *ngIf="resultDestino" class="spinner-container">
+         <ion-spinner></ion-spinner>
+     </div>
+    <ion-list *ngIf="resultDestino">
+         <ion-item *ngFor="let item of result">
+           <p (click)="clickDestino(item)">  {{item.label}} </p>
+         </ion-item>
+     </ion-list>
+
+     <ion-row>
+         <ion-col width-50 item-left>
+             <ion-label color="primary">FECHA SALIDA</ion-label>
+             <input type="date" required/>
+         </ion-col>
+         <ion-col width-50 item-right>
+             <ion-label color="primary">FECHA REGRESO</ion-label>
+             <input type="date" required/>
+         </ion-col>
+     </ion-row>
+     <ion-row>
+         <ion-col width-50 item-left>
+             <ion-label color="primary">PASAJEROS</ion-label>
+             <ion-select name="passagers" required>
+               <ion-option value="1" selected>1</ion-option>
+               <ion-option value="2">2</ion-option>
+               <ion-option value="3">3</ion-option>
+               <ion-option value="4">4</ion-option>
+               <ion-option value="5">5</ion-option>
+               <ion-option value="6">6</ion-option>
+             </ion-select>
+         </ion-col>
+         <ion-col width-50 item-right>
+            <ion-label color="primary">CLASE</ion-label>
+             <ion-select name="class">
+               <ion-option value="1" selected>Economica</ion-option>
+               <ion-option value="2">Bussines</ion-option>
+               <ion-option value="3">Premium</ion-option>
+             </ion-select>
+         </ion-col>
+     </ion-row>
+
+
+   <button ion-button block>Buscar</button>
+
+
+</ion-content>

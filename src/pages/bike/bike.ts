@@ -5,7 +5,7 @@ import { CityPage } from '../bike/city/city';
 
 @Component({
   selector: 'page-bike',
-  templateUrl: 'bike.html'
+  templateUrl: 'bike.html',
 })
 export class BikePage  {
 
@@ -46,4 +46,6 @@ export class BikePage  {
   openCity(p){
        this.navCtrl.push(CityPage,{city:p});
   }
+
+
 }

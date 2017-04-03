@@ -1,19 +1,63 @@
-<!--
-  Generated template for the StationDetails page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>{{title }}</ion-title>
+  <ion-navbar color=primary>
+    <ion-title>{{nav.data.station.address}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  
+<ion-content >
+ <ion-row>
+    <ion-col width-33 class="all">
+      <ion-icon  name="bicycle" style="font-size:3em;"> </ion-icon>
+        <ion-badge>{{nav.data.station.bike_stands}}</ion-badge>
+         <p><span> Total </span></p>
+    </ion-col>
+    <ion-col width-33 color="primary" class="free">
+      <ion-icon  name="bicycle" style="font-size:3em;"> </ion-icon>
+        <ion-badge>{{nav.data.station.available_bikes}}</ion-badge>
+         <p><span> Disponibles</span></p>
+    </ion-col>
+    <ion-col width-33 color="danger" class="used">
+      <ion-icon  name="bicycle" style="font-size:3em;"> </ion-icon>
+        <ion-badge>{{nav.data.station.available_bike_stands}}</ion-badge>
+        <p> <span> En uso</span></p>
+    </ion-col>
+</ion-row>
+
+<ion-list>
+  <ion-item>
+        <h2>{{nav.data.station.address}}</h2>
+    </ion-item>
+    <ion-item>
+        <h3>Ubicacion:</h3>
+        <strong> {{nav.data.station.address}}</strong>
+    </ion-item>
+    <ion-item>
+        <h3> Numero estacion:</h3>
+
+          <strong>{{nav.data.station.number}}</strong>
+   </ion-item>
+   <ion-item>
+
+        <h3> Estado:</h3>
+            <strong>{{nav.data.station.status}}</strong>
+  </ion-item>
+  <ion-item>
+        <h3> Ultima actualizacion:</h3>
+        <strong>{{update}}</strong>
+  </ion-item>
+  <ion-item>
+        <h3>Coordenadas GPS:</h3>
+           <p>Latitud:<strong> {{nav.data.station.position.lat}}</strong></p>
+           <p>Longitud:<strong> {{nav.data.station.position.lng}}</strong> </p>
+ </ion-item>
+</ion-list>
+
+
+
+
 
 </ion-content>

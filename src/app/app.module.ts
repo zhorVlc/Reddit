@@ -7,15 +7,16 @@ import { ShowPage } from '../pages/reddit/show/show';
 import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
 import { BikePage } from '../pages/bike/bike';
+import { FlyPage } from '../pages/fly/fly';
 import { CityPage } from '../pages/bike/city/city';
 import { StationPage } from '../pages/bike/station/station';
 
 
-import { AgmCoreModule } from 'angular2-google-maps/core';
-
-import {RedditService} from '../providers/reddit-service';
+import { MapsService } from '../providers/maps-service';
+import { RedditService} from '../providers/reddit-service';
 import { BikeService } from '../providers/bike-service';
-import { GeolocationService } from '../providers/geolocation-service';
+import { PlaneService}  from '../providers/plane-service';
+
 import { Truncate } from '../pipes/truncate';
 
 
@@ -31,13 +32,12 @@ import { Truncate } from '../pipes/truncate';
     CityPage,
     Truncate,
     StationPage,
+    FlyPage,
 
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBpgyicTGWpxTOfwyWS-8wW7E5zmnOd2do'
-    })
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,9 +50,11 @@ import { Truncate } from '../pipes/truncate';
     BikePage,
     CityPage,
     StationPage,
+    FlyPage,
   ],
   providers: [
-   {provide: ErrorHandler, useClass: IonicErrorHandler},RedditService,BikeService
+   {provide: ErrorHandler, useClass: IonicErrorHandler}
+   ,RedditService,BikeService,PlaneService,MapsService
 
   ]
 })

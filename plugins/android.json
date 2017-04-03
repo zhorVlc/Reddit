@@ -1,0 +1,51 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-googlemaps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyBpgyicTGWpxTOfwyWS-8wW7E5zmnOd2doE",
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-health": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        },
+        "cordova-plugin-mapbox": {
+            "ACCESS_TOKEN": "pk.eyJ1IjoiamFub3ZsYyIsImEiOiJjajB1MHozcTEwNWN5MnducHlpNHp1ZmxxIn0.ep6bKsnoqBrPmijCWGdmew",
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.reddit606534"
+        }
+    }
+}
